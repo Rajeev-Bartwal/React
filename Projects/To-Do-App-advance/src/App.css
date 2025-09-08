@@ -1,0 +1,15 @@
+input {
+   width: 100%;
+   text-align: center;
+}
+
+.todo-container{
+  margin: 20px;
+  padding: 10px;
+  text-align: left;
+}
+
+
+.rb_button{
+    width: 80px;
+}

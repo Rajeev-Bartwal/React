@@ -1,0 +1,42 @@
+/* Buttons */
+.button {
+  width: 50px;
+  height: 50px;
+  margin: 3px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: #eadada;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+
+.button:hover {
+  background: #d6d6d6;
+}
+
+.button:active {
+  background: #bcbcbc;
+}
+
+/* // Special buttons  */
+.button.operator {
+  background: #4CAF50;
+  color: white;
+}
+
+.button.operator:hover {
+  background: #45a049;
+}
+
+.button.equal {
+  background: #2196F3;
+  color: white;
+  width: 108px;  /*double width  */
+}
+
+.button.equal:hover {
+  background: #884fbe;
+}

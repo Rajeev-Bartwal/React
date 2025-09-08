@@ -1,21 +1,32 @@
+import Fooditems from "./Components/Fooditems";
+import Error from "./Components/Error";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import Container from "./Components/Container";
 
 function App() {
-  let fooditems = [];
-  // let fooditems = ["Daal", "Green vegetable", "Roti.", "Milk", "Salad", "Ghee"];
+  let fooditems = [
+    "Daal",
+    "Green vegetable",
+    "Roti.",
+    "Milk",
+    "Salad",
+    "Ghee",
+    "Apple",
+  ];
 
   return (
     <>
-      <h1>Healthy Food</h1>
-      {fooditems.length === 0 ? <h1>I'm still hungry...</h1> : null}
-      <ul className="list-group">
-        {fooditems.map((item) => (
-          <li key={item} className="list-group-item item">
-            {item}
-          </li>
-        ))}
-      </ul>
+      <Container>
+        <h1 className="heading">Healthy Food</h1>
+        <Error items={fooditems} />
+        <Fooditems Fooditems={fooditems} />
+      </Container>
+      {/* <Container>
+        <p className="heading">Above List is The list of Healthy Foods that are good for your health and well being
+          </p>
+      </Container> */}
     </>
   );
 }

@@ -1,0 +1,14 @@
+.item {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(144, 219, 186);
+}
+
+.span{
+  font-weight: 500;
+  color: rgb(40, 39, 40);
+}
+
+.button{
+   float: right;
+   width: auto;
+}
