@@ -1,7 +1,7 @@
 const Error = (props) => {
   
     return    <>
-     {props.items.length === 0 ? <h1>I'm still hungry...</h1> : null}
+     {props.items.length === 0 ? <h1  className="heading">Please Enter Food Items</h1> : null}
     </>
 }
 

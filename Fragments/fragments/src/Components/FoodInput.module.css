@@ -1,0 +1,14 @@
+.input_container {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  gap: 15px; /* Space between input and button */
+}
+
+.text_input {
+  flex: 1; 
+  padding: 0.5rem;
+}
+
+.submit_button {
+  padding: 0.5rem 1rem;
+}

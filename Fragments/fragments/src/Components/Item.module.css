@@ -1,14 +1,20 @@
 .item {
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(144, 219, 186);
+    background-color: rgb(42, 186, 124);
 }
 
 .span{
   font-weight: 500;
-  color: rgb(40, 39, 40);
+  color: rgb(0, 0, 0);
 }
 
 .button{
+  margin-left: 10px;
    float: right;
    width: auto;
+}
+
+.bought {
+  background-color: #78dcd2 !important; 
+  font-size: larger;
 }

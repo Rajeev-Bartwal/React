@@ -1,10 +1,30 @@
+import { useState } from "react";
 import Item from "./Item";
 
-const Fooditems = (props) => {
+const Fooditems = ({ fooditems }) => {
+  const [boughtItems, setBoughtItems] = useState(new Set());
+
+  const handleBuyButton = (item) => {
+    console.log(`${item} is bought`);
+    let upadatedBoughtItems = new Set(boughtItems);
+    if (upadatedBoughtItems.has(item)) {
+      upadatedBoughtItems.delete(item);
+    } else {
+      upadatedBoughtItems.add(item);
+    }
+    setBoughtItems(upadatedBoughtItems);
+    console.log(upadatedBoughtItems);
+  };
+
   return (
     <ul className="list-group">
-      {props.Fooditems.map((item) => (
-         <Item key = {item} fooditem = {item}></Item>
+      {fooditems.map((item) => (
+        <Item
+          key={item}
+          fooditem={item}
+          isBought={boughtItems.has(item)}
+          handleBuyButton={() => handleBuyButton(item)}
+        ></Item>
       ))}
     </ul>
   );
