@@ -1,15 +1,32 @@
 input {
-   width: 100%;
-   text-align: center;
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.todo-container{
-  margin: 20px;
-  padding: 10px;
-  text-align: left;
+.todo-container {
+    margin: 20px auto;
+    padding: 15px;
+    text-align: left;
+    border: 2px solid #021f26;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.1);
 }
 
-
-.rb_button{
+.rb_button {
     width: 80px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rb_button:hover {
+    background-color: #0056b3;
 }

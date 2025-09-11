@@ -1,8 +1,20 @@
 .heading {
-  font-weight: 700;
-  font-size: 50px;
-  margin: 10px;
-  margin-bottom: 20px;
-  padding: 10px;
-  text-align: center;
+    font-weight: 700;
+    font-size: 3rem;   
+    margin: 20px 10px;     
+    padding: 10px 0; 
+    text-align: center;
+    color: #0f3c54;              
+    line-height: 1.2;            
+}
+
+.heading1{
+    font-weight: 600;
+    font-size: 1rem;   
+    margin: 5px;     
+    padding: 10px 0; 
+    font-family: cursive;
+    text-align: center;
+    color: #5f7987;              
+    line-height: 1.2;    
 }

@@ -1,36 +1,36 @@
 import AppName from "./Components/AppName";
 import AddTodo from "./Components/AddTodo";
 import TodoItems from "./Components/TodoItems";
+import Welcome from "./Components/Welcom";
+import { useState } from "react";
 
 function App() {
-  const todoItems = [
-    {
-      name: "Go to school",
-      date: "2/06/2025",
-    },
-    {
-      name: "Learn React",
-      date: "2/06/2025",
-    },
-    {
-      name: "Do DSA",
-      date: "5/06/2025",
-    },
-    {
-      name: "Clear JS Concept",
-      date: "2/06/2025",
-    },
-    {
-      name: "Watch Movie",
-      date: "2/06/2025",
-    },
-  ];
+  let [todoItems, setTodoItems] = useState([]);
+
+  const handleOnClick = (todoName, todoDate) => {
+    if (todoName && todoDate) {
+      let newTodo = {
+        name: todoName,
+        date: todoDate,
+      };
+      let updatedTodoItems = [...todoItems, newTodo];
+      setTodoItems(updatedTodoItems);
+    } else {
+      alert("Please enter both name and date");
+    }
+  };
+
+  const handleDeleteClick = (todo) => {
+    let newTodos = todoItems.filter((item) => item.name != todo);
+    setTodoItems(newTodos);
+  };
 
   return (
     <center className="todo-container">
       <AppName />
-      <AddTodo />
-      <TodoItems TodoItems={todoItems} />
+      <AddTodo handleOnClick={handleOnClick} />
+      {todoItems.length === 0 && <Welcome />}
+      <TodoItems TodoItems={todoItems} handleOnClick={handleDeleteClick}/>
     </center>
   );
 }

@@ -1,6 +1,7 @@
 import styles from "./Button.module.css";
-const Button = ({buttons}) => {
-  return   buttons.map(button => <button className={`${styles.button}`}>{button}</button>)
+const Button = ({buttons , handleOnClick }) => {
+  return   buttons.map(button => <button className={`${styles.button}`}
+  onClick={() => handleOnClick(button)}>{button}</button>)
   
 };
 

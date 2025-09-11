@@ -1,5 +1,6 @@
 /* Display */
 .display {
+  color: black !important;
   margin-bottom: 15px;
   width: 100%;
   height: 50px;
@@ -8,6 +9,6 @@
   padding: 10px;
   border: none;
   border-radius: 8px;
-  background: #7eacc4;
+  background: #89c3e2;
   box-sizing: border-box;
 }
