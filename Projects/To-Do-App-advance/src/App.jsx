@@ -8,13 +8,17 @@ function App() {
   let [todoItems, setTodoItems] = useState([]);
 
   const handleOnClick = (todoName, todoDate) => {
+    
     if (todoName && todoDate) {
-      let newTodo = {
-        name: todoName,
-        date: todoDate,
-      };
-      let updatedTodoItems = [...todoItems, newTodo];
-      setTodoItems(updatedTodoItems);
+
+    const isDuplicate = todoItems.some(
+      (item) => item.name === todoName && item.date === todoDate
+    );
+     if (isDuplicate) {
+      alert("This todo already exists!");
+    } else {
+      setTodoItems((currValue) => [...currValue , {name : todoName , date : todoDate} ]);
+    }
     } else {
       alert("Please enter both name and date");
     }

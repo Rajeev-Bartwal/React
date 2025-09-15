@@ -1,8 +1,11 @@
 import styles from "./AddTodo.module.css";
+import { useContext } from "react";
 import { useRef } from "react";
 import { RiAddLargeLine } from "react-icons/ri";
+import { TodoContext } from "../Store/todo_items_store";
 
-function AddTodo({ handleOnClick }) {
+function AddTodo() {
+  const {addItem} = useContext(TodoContext)
   const todoNameElement = useRef();
   const todoDateElement  = useRef();
 
@@ -12,7 +15,7 @@ function AddTodo({ handleOnClick }) {
     todoNameElement.current.value = ''
     const todoDate = todoDateElement.current.value
     todoDateElement.current.value = ''
-    handleOnClick(todoName , todoDate);
+    addItem(todoName , todoDate);
   };
 
   return (
