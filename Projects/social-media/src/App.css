@@ -1,0 +1,19 @@
+.App_Container{
+   display : flex
+}
+
+.content{ 
+  width: 100%;
+}
+
+.sidebar{
+   min-height: 750px;
+   z-index: 1000;
+}
+
+.header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}

@@ -4,10 +4,12 @@ import { TodoContext } from "../Store/todo_items_store";
 
 function TodoItems() {
   const {todoItems} = useContext(TodoContext)
+  
+  
   return (
     <>
      { todoItems.map((item) => (
-      <TodoItem todoName={item.name} todoDate={item.date}/>
+      <TodoItem key = {item.name} todoName={item.name} todoDate={item.date}/>
       ))}
     </>
   );
